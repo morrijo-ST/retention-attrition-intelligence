@@ -2,11 +2,15 @@
 
 An enterprise retention and recurring-revenue health reference for logo attrition, revenue attrition, GRR, NRR, contraction, expansion, health scoring, and executive decision support.
 
+> **Live demo:** https://retention-attrition-intelligence.onrender.com
+
 > **Working public demo:** Includes deterministic synthetic recurring-revenue data, executable GRR/NRR and attrition logic, an interactive Streamlit app, automated tests, and run instructions. See [`DEMO.md`](DEMO.md).
 
 > **Portfolio note:** All customer names, financial values, identifiers, and scenarios used publicly are synthetic or generalized.
 
 ## Try It
+
+**Hosted:** https://retention-attrition-intelligence.onrender.com
 
 ```bash
 python -m venv .venv
@@ -60,28 +64,6 @@ CRM / Contracts / Renewal Schedule
 
 `Power BI` `DAX` `Snowflake` `SQL` `Python` `Streamlit` `Pandas` `Plotly` `FP&A` `Revenue Analytics` `Customer Retention`
 
-## Repository Structure
-
-```text
-.
-├── app.py
-├── core.py
-├── synthetic.py
-├── requirements.txt
-├── DEMO.md
-├── docs/
-│   ├── case-study.md
-│   ├── architecture.md
-│   ├── retention-methodology.md
-│   ├── metric-definitions.md
-│   ├── business-rules.md
-│   ├── data-dictionary.md
-│   ├── security.md
-│   └── runbook.md
-└── tests/
-    └── test_core.py
-```
-
 ## Demo Status
 
 - [x] Public-safe project definition
@@ -91,10 +73,6 @@ CRM / Contracts / Renewal Schedule
 - [x] Health score methodology
 - [x] Interactive dashboard demo
 - [x] Automated tests
-- [ ] Hosted live-demo URL
+- [x] Hosted live-demo URL
 - [ ] Sanitized Power BI screenshot gallery
 - [ ] Recorded walkthrough
-
-## Decision-Support Focus
-
-The goal is to move from descriptive churn reporting to a repeatable retention framework that explains the drivers of revenue health and gives management a consistent way to compare risk across customers, products, regions, and periods.
