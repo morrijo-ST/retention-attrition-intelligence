@@ -1,31 +1,37 @@
 # Retention & Attrition Intelligence
 
-An enterprise retention and recurring-revenue health platform for logo attrition, revenue attrition, GRR, NRR, contraction, expansion, GACV movement, health scoring, and executive commentary.
+An enterprise retention and recurring-revenue health reference for logo attrition, revenue attrition, GRR, NRR, contraction, expansion, health scoring, and executive decision support.
 
-> **Portfolio note:** This public repository is a sanitized reference implementation. All customer names, financial values, identifiers, and scenarios used publicly are synthetic or generalized.
+> **Working public demo:** Includes deterministic synthetic recurring-revenue data, executable GRR/NRR and attrition logic, an interactive Streamlit app, automated tests, and run instructions. See [`DEMO.md`](DEMO.md).
+
+> **Portfolio note:** All customer names, financial values, identifiers, and scenarios used publicly are synthetic or generalized.
+
+## Try It
+
+```bash
+python -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+streamlit run app.py
+```
 
 ## Business Problem
 
-Recurring-revenue businesses need more than a churn percentage. Finance and management teams need to understand where revenue is being lost, whether expansion offsets attrition, which customer segments are weakening, and how overall portfolio health is changing over time.
+Recurring-revenue businesses need more than a churn percentage. Finance and management teams need to understand where revenue is being lost, whether expansion offsets attrition, which customer segments are weakening, and how overall portfolio health is changing.
 
-This project demonstrates a governed retention framework that converts recurring-revenue movements into a decision-support system for FP&A and leadership.
+## Demo Capabilities
 
-## Core Capabilities
-
-- logo attrition rate
-- revenue attrition rate
-- gross revenue retention (GRR)
-- net revenue retention (NRR)
-- gross / net attrition
-- lost revenue
-- contraction revenue
-- expansion revenue
-- GACV loss and growth analysis
-- expansion and growth coverage ratios
-- customer / product / region segmentation
-- weighted health scoring
-- A–F health grades
-- executive commentary
+- 600-customer synthetic recurring-revenue portfolio
+- full renewal / expansion / contraction / churn movements
+- GRR
+- NRR
+- logo attrition
+- revenue attrition
+- expansion and contraction analysis
+- region and product filtering
+- weighted portfolio health score
+- A–F health grade
+- retention movement bridge
 
 ## Reference Architecture
 
@@ -48,19 +54,21 @@ CRM / Contracts / Renewal Schedule
         Health Scoring Layer
                |
  Customer / Region / Product Views
-               |
-       Executive Commentary
 ```
 
 ## Technology
 
-`Power BI` `DAX` `Snowflake` `SQL` `FP&A` `Revenue Analytics` `Customer Retention`
+`Power BI` `DAX` `Snowflake` `SQL` `Python` `Streamlit` `Pandas` `Plotly` `FP&A` `Revenue Analytics` `Customer Retention`
 
 ## Repository Structure
 
 ```text
 .
-├── README.md
+├── app.py
+├── core.py
+├── synthetic.py
+├── requirements.txt
+├── DEMO.md
 ├── docs/
 │   ├── case-study.md
 │   ├── architecture.md
@@ -70,25 +78,23 @@ CRM / Contracts / Renewal Schedule
 │   ├── data-dictionary.md
 │   ├── security.md
 │   └── runbook.md
-├── sample-data/
-├── dax/
-├── sql/
-├── diagrams/
-├── screenshots/
 └── tests/
+    └── test_core.py
 ```
 
-## Portfolio Roadmap
+## Demo Status
 
 - [x] Public-safe project definition
-- [ ] Synthetic customer / contract / renewal dataset
-- [ ] Movement-classification examples
-- [ ] GRR / NRR / attrition metric library
-- [ ] Health score methodology
-- [ ] Architecture diagram
-- [ ] Sanitized dashboard screenshots
-- [ ] Demo walkthrough
+- [x] Synthetic customer / renewal portfolio
+- [x] Movement classification
+- [x] GRR / NRR / attrition metric engine
+- [x] Health score methodology
+- [x] Interactive dashboard demo
+- [x] Automated tests
+- [ ] Hosted live-demo URL
+- [ ] Sanitized Power BI screenshot gallery
+- [ ] Recorded walkthrough
 
 ## Decision-Support Focus
 
-The goal is to move from descriptive churn reporting to a forward-looking retention framework that explains the drivers of revenue health and provides management with a consistent way to compare risk across customers, products, regions, and periods.
+The goal is to move from descriptive churn reporting to a repeatable retention framework that explains the drivers of revenue health and gives management a consistent way to compare risk across customers, products, regions, and periods.
